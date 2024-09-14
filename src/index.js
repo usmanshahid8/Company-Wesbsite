@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Home from './Pages/Home/Home';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './Navbar/Navbar';
+import { ThemeProvider } from '@emotion/react';
+import { theme } from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+    <Navbar />
+    </ThemeProvider>
+    <Home />
   </React.StrictMode>
 );
 
